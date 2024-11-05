@@ -27,6 +27,12 @@ Colab da Aula: https://colab.research.google.com/drive/1T6BBuvGyWBKJLKh5E64DfzUP
 
 Colab de Consultas: https://colab.research.google.com/drive/1MSM4JwXS6Wjc8XTei503Ds2Komr9XXoP?usp=sharing
 
+Vistas e Arquivos da Ontologia: https://github.com/valentinaslacerda/ontology_adhd/tree/main/OntoUML_refatorado
+
+Especificações de Requisitos: https://github.com/valentinaslacerda/ontology_adhd/blob/main/Especificacoes_de_requisitos.pdf
+
+Dicionário ISO: https://github.com/valentinaslacerda/ontology_adhd/blob/main/ISODictionary.pdf
+
 ## Autores
 
 - [@valentinaslacerda](https://github.com/valentinaslacerda)
