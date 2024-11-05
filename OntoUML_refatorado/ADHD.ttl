@@ -1,0 +1,390 @@
+@prefix : <http://ADHD.com#>.
+@prefix gufo: <http://purl.org/nemo/gufo#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<http://ADHD.com> rdf:type owl:Ontology;
+    owl:imports gufo:.
+:ADHD rdf:type owl:Class, gufo:Category, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "ADHD"@en.
+:DiagnosticAssessment rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Relator;
+    rdfs:label "Diagnostic assessment"@en.
+:DifferentialDiagnosis rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Relator;
+    rdfs:label "Differential diagnosis"@en.
+:Patient rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Patient"@en.
+:EducationalAssessment rdf:type owl:Class, gufo:Category, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Educational assessment"@en.
+:PoorSchoolRecord rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:label "Poor School record"@en.
+:PoorGradeHistory rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:label "Poor Grade history"@en.
+:MedicalEvaluation rdf:type owl:Class, gufo:Category, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Medical evaluation"@en.
+:SleepRespiration rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:label "Sleep respiration"@en.
+:PrenatalExposure rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:label "Prenatal exposure"@en.
+:TraumaticBrainInjury rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:label "Traumatic brain injury "@en.
+:PerinatalComplication rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:label "Perinatal complication"@en.
+:CentralNervousSystemInfection rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:label "Central nervous system infection"@en.
+:SelectiveEating rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:label "Selective eating"@en.
+:HeartDisease rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:label "Heart disease"@en.
+:LossOfAppetite rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:label "Loss of appetite"@en.
+:Symptom rdf:type owl:Class, gufo:Category, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Symptom"@en.
+:SymptomOfHyperactivityimpulsivity rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:label "Symptom of hyperactivity/impulsivity"@en.
+:SymptomOfInattention rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:label "Symptom of inattention"@en.
+:BehaviorOverTheLast6Months rdf:type owl:Class, gufo:Phase, owl:NamedIndividual;
+    rdfs:label " Behavior over the last 6 months"@en.
+:CombinedPresentation rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Relator;
+    rdfs:label "Combined Presentation"@en.
+:InattentionToDetails rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Inattention to details"@en.
+:DifficultyOrganizingTasks rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Difficulty organizing tasks"@en.
+:ForgettingDailyActivities rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Forgetting daily activities"@en.
+:DifficultyCompletingTasks rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label " Difficulty completing tasks"@en.
+:DifficultyWithSustainedMentalEffort rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Difficulty with sustained mental effort"@en.
+:EasilyDistracted rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Easily distracted"@en.
+:InattentionWhenSpokenToDirectly rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Inattention when spoken to directly"@en.
+:DifficultyMaintainingAttentionOnTasks rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Difficulty maintaining attention on tasks"@en.
+:LossOfObjects rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Loss of objects"@en.
+:FrequentlyInterruptsOthers rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Frequently interrupts others"@en.
+:TalksExcessively rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Talks excessively"@en.
+:MovingAroundTheClassroomOrOtherLocations rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Moving around the classroom or other locations"@en.
+:DifficultyPlayingQuietly rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Difficulty playing quietly"@en.
+:FrequentlyFidgetsWithHandsOrFeet rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Frequently fidgets with hands or feet"@en.
+:RespondsToQuestionsAbruptly rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Responds to questions abruptly"@en.
+:RunningAndClimbingFrequently rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Running and climbing frequently"@en.
+:ActsAsIfAlwaysOnTheMove rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Acts as if always on the move"@en.
+:DifficultyWaitingForOnesTurn rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Difficulty waiting for one's turn"@en.
+:Comorbidity rdf:type owl:Class, gufo:Category, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Comorbidity"@en.
+:ConductDisorder rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:label "Conduct disorder"@en.
+:OppositionalDefiantDisorder rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:label "Oppositional Defiant Disorder"@en.
+:MoodDisorder rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:label "Mood disorder"@en.
+:AnxietyDisorder rdf:type owl:Class, gufo:Category, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Anxiety disorder"@en.
+:AutismSpectrumDisorder rdf:type owl:Class, gufo:Category, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Autism Spectrum Disorder"@en.
+:SleepDisorder rdf:type owl:Class, gufo:Category, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Sleep disorder"@en.
+:DepressiveDisorder rdf:type owl:Class, gufo:Category, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Depressive disorder"@en.
+:LearningDisorder rdf:type owl:Class, gufo:Category, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Learning disorder"@en.
+:AssociatedFactor rdf:type owl:Class, gufo:Category, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Associated factor"@en.
+:GeneticFactor rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:label "Genetic factor"@en.
+:EnvironmentalFactor rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:label "Environmental factor"@en.
+:NeurobiologicalFactor rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:label "Neurobiological factor"@en.
+:DevelopmentalAssessment rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Developmental assessment"@en.
+:BehaviorSinceTheLastEvaluation rdf:type owl:Class, gufo:Phase, owl:NamedIndividual;
+    rdfs:label "Behavior since the last evaluation"@en.
+:BehaviorSinceTheStartOfTheSchoolYear rdf:type owl:Class, gufo:Phase, owl:NamedIndividual;
+    rdfs:label "Behavior since the start of the school year"@en.
+:Doctor rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Doctor"@en.
+:PoorSchoolRecord rdfs:subClassOf :EducationalAssessment.
+:PoorGradeHistory rdfs:subClassOf :EducationalAssessment.
+:SleepRespiration rdfs:subClassOf :MedicalEvaluation.
+:TraumaticBrainInjury rdfs:subClassOf :MedicalEvaluation.
+:PrenatalExposure rdfs:subClassOf :MedicalEvaluation.
+:PerinatalComplication rdfs:subClassOf :MedicalEvaluation.
+:CentralNervousSystemInfection rdfs:subClassOf :MedicalEvaluation.
+:SelectiveEating rdfs:subClassOf :MedicalEvaluation.
+:HeartDisease rdfs:subClassOf :MedicalEvaluation.
+:LossOfAppetite rdfs:subClassOf :MedicalEvaluation.
+:SymptomOfHyperactivityimpulsivity rdfs:subClassOf :Symptom.
+:SymptomOfInattention rdfs:subClassOf :Symptom.
+:BehaviorOverTheLast6Months rdfs:subClassOf :DevelopmentalAssessment.
+:InattentionToDetails rdfs:subClassOf :SymptomOfInattention.
+:DifficultyOrganizingTasks rdfs:subClassOf :SymptomOfInattention.
+:ForgettingDailyActivities rdfs:subClassOf :SymptomOfInattention.
+:DifficultyCompletingTasks rdfs:subClassOf :SymptomOfInattention.
+:LossOfObjects rdfs:subClassOf :SymptomOfInattention.
+:EasilyDistracted rdfs:subClassOf :SymptomOfInattention.
+:DifficultyWithSustainedMentalEffort rdfs:subClassOf :SymptomOfInattention.
+:DifficultyMaintainingAttentionOnTasks rdfs:subClassOf :SymptomOfInattention.
+:InattentionWhenSpokenToDirectly rdfs:subClassOf :SymptomOfInattention.
+:FrequentlyInterruptsOthers rdfs:subClassOf :SymptomOfHyperactivityimpulsivity.
+:TalksExcessively rdfs:subClassOf :SymptomOfHyperactivityimpulsivity.
+:MovingAroundTheClassroomOrOtherLocations rdfs:subClassOf :SymptomOfHyperactivityimpulsivity.
+:DifficultyPlayingQuietly rdfs:subClassOf :SymptomOfHyperactivityimpulsivity.
+:RespondsToQuestionsAbruptly rdfs:subClassOf :SymptomOfHyperactivityimpulsivity.
+:RunningAndClimbingFrequently rdfs:subClassOf :SymptomOfHyperactivityimpulsivity.
+:ActsAsIfAlwaysOnTheMove rdfs:subClassOf :SymptomOfHyperactivityimpulsivity.
+:DifficultyWaitingForOnesTurn rdfs:subClassOf :SymptomOfHyperactivityimpulsivity.
+:FrequentlyFidgetsWithHandsOrFeet rdfs:subClassOf :SymptomOfHyperactivityimpulsivity.
+:OppositionalDefiantDisorder rdfs:subClassOf :Comorbidity.
+:ConductDisorder rdfs:subClassOf :Comorbidity.
+:MoodDisorder rdfs:subClassOf :Comorbidity.
+:GeneticFactor rdfs:subClassOf :AssociatedFactor.
+:EnvironmentalFactor rdfs:subClassOf :AssociatedFactor.
+:NeurobiologicalFactor rdfs:subClassOf :AssociatedFactor.
+:BehaviorSinceTheStartOfTheSchoolYear rdfs:subClassOf :DevelopmentalAssessment.
+:BehaviorSinceTheLastEvaluation rdfs:subClassOf :DevelopmentalAssessment.
+:DevelopmentalAssessment owl:equivalentClass [
+  rdf:type owl:Class;
+  owl:unionOf (:BehaviorOverTheLast6Months :BehaviorSinceTheLastEvaluation :BehaviorSinceTheStartOfTheSchoolYear)
+].
+:DiagnosticAssessment rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :ADHD
+].
+:ADHD rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :DiagnosticAssessment
+].
+:DiagnosticAssessment rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :EducationalAssessment
+].
+:DifferentialDiagnosis rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:someValuesFrom :ADHD
+].
+:ADHD rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :DifferentialDiagnosis
+].
+:DiagnosticAssessment rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Patient
+].
+:Patient rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :DiagnosticAssessment
+].
+:DifferentialDiagnosis rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:someValuesFrom :Patient
+].
+:Patient rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :DifferentialDiagnosis
+].
+:DiagnosticAssessment rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Symptom
+].
+:Symptom rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:minQualifiedCardinality "6"^^xsd:nonNegativeInteger;
+  owl:onClass :DiagnosticAssessment
+].
+:DiagnosticAssessment rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :DevelopmentalAssessment
+].
+:DevelopmentalAssessment rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :DiagnosticAssessment
+].
+:DifferentialDiagnosis rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Comorbidity
+].
+:Comorbidity rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:someValuesFrom :DifferentialDiagnosis
+].
+:DifferentialDiagnosis rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :AnxietyDisorder
+].
+:AnxietyDisorder rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:someValuesFrom :DifferentialDiagnosis
+].
+:DifferentialDiagnosis rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :AutismSpectrumDisorder
+].
+:AutismSpectrumDisorder rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:someValuesFrom :DifferentialDiagnosis
+].
+:DifferentialDiagnosis rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :SleepDisorder
+].
+:SleepDisorder rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:someValuesFrom :DifferentialDiagnosis
+].
+:DifferentialDiagnosis rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :DepressiveDisorder
+].
+:DepressiveDisorder rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:someValuesFrom :DifferentialDiagnosis
+].
+:DifferentialDiagnosis rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :LearningDisorder
+].
+:LearningDisorder rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:someValuesFrom :DifferentialDiagnosis
+].
+:DifferentialDiagnosis rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :AssociatedFactor
+].
+:AssociatedFactor rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:someValuesFrom :DifferentialDiagnosis
+].
+:CombinedPresentation rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:minQualifiedCardinality "6"^^xsd:nonNegativeInteger;
+  owl:onClass :SymptomOfInattention
+].
+:SymptomOfInattention rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:someValuesFrom :CombinedPresentation
+].
+:CombinedPresentation rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:minQualifiedCardinality "6"^^xsd:nonNegativeInteger;
+  owl:onClass :SymptomOfHyperactivityimpulsivity
+].
+:SymptomOfHyperactivityimpulsivity rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:someValuesFrom :CombinedPresentation
+].
+:DiagnosticAssessment rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :MedicalEvaluation
+].
+:MedicalEvaluation rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:someValuesFrom :DiagnosticAssessment
+].
+:DiagnosticAssessment rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Doctor
+].
+:Doctor rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :DiagnosticAssessment
+].
+:DifferentialDiagnosis rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:someValuesFrom :Doctor
+].
+:Doctor rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :DifferentialDiagnosis
+].
