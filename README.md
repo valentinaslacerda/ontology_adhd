@@ -7,8 +7,8 @@ ontologia será usada para auxiliar no diagnóstico preciso, apoiando médicos e
 especialistas na avaliação e distinção entre TDAH e outras doenças com sintomas
 semelhantes.
 
-
-
+## Documentação da ontologia
+https://adhd-ontology.netlify.app/
 
 
 ## Funcionalidades
